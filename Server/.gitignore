@@ -1,4 +1,4 @@
-# Hello world!
 obj/
 bin/
 .vscode/
+*.csproj

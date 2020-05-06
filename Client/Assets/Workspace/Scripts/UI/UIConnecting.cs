@@ -18,20 +18,23 @@ public class UIConnecting : MonoBehaviour
 
     void Start()
     {
+        Client.Connect();
+
         Text = GoText.GetComponent<TextMeshProUGUI>();
-        StartCoroutine(CheckConnection());
+        //StartCoroutine(CheckConnection());
     }
 
-    IEnumerator CheckConnection()
+    /*IEnumerator CheckConnection()
     {
         int i = 0;
         while (!Client.IsConnected())
         {
+            // Animate connecting text
             Text.text = message + dots[i % dots.Length];
             i++;
             yield return new WaitForSeconds(0.5f);
         }
 
         SceneManager.LoadScene("Create Account");
-    }
+    }*/
 }
